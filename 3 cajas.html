@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Cajas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 8px 8px 40px;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:
+                radial-gradient(circle at 18% 18%, rgba(255, 183, 77, 0.22), transparent 24%),
+                radial-gradient(circle at 82% 16%, rgba(0, 217, 255, 0.24), transparent 22%),
+                radial-gradient(circle at 72% 82%, rgba(167, 107, 255, 0.22), transparent 26%),
+                radial-gradient(circle at 48% 54%, rgba(255, 92, 154, 0.14), transparent 28%),
+                linear-gradient(135deg, #08111d 0%, #11203a 34%, #12324e 67%, #0a7282 100%);
+            background-size: 220% 220%;
+            background-attachment: fixed;
+            animation: fondo 14s ease infinite;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            border-radius: 999px;
+            pointer-events: none;
+            filter: blur(50px);
+            opacity: 0.42;
+            z-index: 0;
+        }
+
+        body::before {
+            width: 300px;
+            height: 300px;
+            left: -80px;
+            top: 10%;
+            background: rgba(255, 166, 77, 0.2);
+        }
+
+        body::after {
+            width: 360px;
+            height: 360px;
+            right: -110px;
+            bottom: -60px;
+            background: rgba(0, 217, 255, 0.18);
+        }
+
+        .boton-ir {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 3;
+            display: inline;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            color: #ffffff;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            box-shadow: none;
+            font-weight: 600;
+            transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
+        }
+
+        .boton-ir:hover {
+            opacity: 0.78;
+            text-decoration-thickness: 2px;
+        }
+
+        .boton-ir:focus-visible {
+            outline: 2px solid rgba(255, 255, 255, 0.9);
+            outline-offset: 4px;
+        }
+
+        @keyframes fondo {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .caja {
+            width: 400px;
+            height: 400px;
+            margin: auto 200px;
+            background: linear-gradient(rgba(0, 92, 212, 0.925), rgba(226, 36, 36, 0.836));
+            margin-bottom: 5px;
+            box-shadow: 30px 20px 40px solid black;
+            border-radius: 0cap20px;
+            position: relative;
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .cristiano {
+            display: flex;
+            margin: auto;
+            border: solid blue 5px;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+        }
+
+        .cristiano:hover {
+            border: solid 5px red;
+        }
+
+        .caja2 {
+            margin-left: 400px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 72px 12px 28px;
+            }
+
+            .boton-ir {
+                top: 14px;
+                left: 14px;
+                font-size: 0.9rem;
+            }
+
+            .caja {
+                width: calc(100% - 16px);
+                height: auto;
+                margin: 0 auto 14px;
+                padding: 24px 0;
+            }
+
+            .caja2 {
+                margin-left: auto;
+            }
+
+            .cristiano {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <a href="formularios practica.html" class="boton-ir" aria-label="Ir al formulario">
+        Ir al formulario
+    </a>
+
+    <div class="caja">
+        <img class="cristiano" src="img/CR7 PLANET.jfif" alt="">
+    </div>
+
+    <div class="caja caja2">
+        <img class="cristiano" src="img/CR7 PLANET.jfif" alt="">
+    </div>
+
+    <div class="caja caja3">
+        <img class="cristiano" src="img/CR7 PLANET.jfif" alt="">
+    </div>
+</body>
+</html>
+

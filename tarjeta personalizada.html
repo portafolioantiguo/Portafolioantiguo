@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta personalizada</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(130deg,rgba(17, 0, 255, 0.808),rgba(255, 188, 2, 0.747));
+            min-height: 100vh;
+        }
+
+        .boton-ir {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 10;
+            display: inline;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            color: #ffffff;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            box-shadow: none;
+            font-weight: 600;
+            transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
+        }
+
+        .boton-ir:hover {
+            opacity: 0.78;
+            text-decoration-thickness: 2px;
+        }
+
+        .boton-ir:focus-visible {
+            outline: 2px solid rgba(255, 255, 255, 0.9);
+            outline-offset: 4px;
+        }
+        .caja {
+            width: 500px;
+            height: 400px;
+            margin: 150px auto;
+            background: rgba(255, 188, 2, 0.548);
+            border-radius: 8px;
+            box-shadow: 3px 3px 20px  rgb(253, 152, 0);
+        }
+
+        .cristiano {
+            display: flex;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            padding-top: 5px;
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+
+        }
+
+        .texto {
+    padding: 5px;
+    padding-left: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.884);
+}
+
+        @media (max-width: 640px) {
+            .boton-ir {
+                top: 14px;
+                left: 14px;
+                font-size: 0.9rem;
+            }
+
+            .caja {
+                width: calc(100% - 24px);
+                height: auto;
+                margin: 96px auto 0;
+                padding-bottom: 18px;
+            }
+
+            .cristiano {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <a href="efecto de scrol.html" class="boton-ir" aria-label="Ir al efecto de desplazamiento">
+        Ir al efecto de desplazamiento
+    </a>
+
+    <div class="caja">
+        
+        <img src="img/cristiano.jpg" alt="imagen de cristiano ronaldo " class="cristiano">
+        <h1>Cristiano Ronaldo</h1>
+        <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ea reprehenderit libero quia maiores, dolorum, perferendis nostrum hic aliquid maxime deleniti atque ullam totam alias sapiente perspiciatis tempore est eveniet.</p>
+    </div>
+</body>
+</html>

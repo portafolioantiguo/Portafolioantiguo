@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto de desplazamiento</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .boton-ir {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 10;
+            display: inline;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            color: #ffffff;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            box-shadow: none;
+            font-weight: 600;
+            transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
+        }
+
+        .boton-ir:hover {
+            opacity: 0.78;
+            text-decoration-thickness: 2px;
+        }
+
+        .boton-ir:focus-visible {
+            outline: 2px solid rgba(255, 255, 255, 0.9);
+            outline-offset: 4px;
+        }
+
+        .seccion-panoramica {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            padding: 24px;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .seccion-panoramica h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .seccion-panoramica p {
+            max-width: 700px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .seccion-contenido {
+            padding: 90px 20px;
+            background-color: white;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .seccion-contenido h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 16px;
+            color: #1d3557;
+        }
+
+        .seccion-contenido p {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            color: #4a4a4a;
+        }
+
+        .espaciador {
+            height: 70vh;
+        }
+
+        @media (max-width: 640px) {
+            .boton-ir {
+                top: 14px;
+                left: 14px;
+                font-size: 0.9rem;
+            }
+
+            .seccion-contenido {
+                padding: 70px 18px;
+            }
+
+            .espaciador {
+                height: 55vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="boton-ir" aria-label="Volver al Inicio">
+        Volver al Inicio
+    </a>
+
+    <main>
+        <section class="seccion-panoramica" style="background-image: url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80);">
+            <h1>Un paseo tranquilo</h1>
+            <p>Desplázate y mira cómo el paisaje se mantiene en calma mientras sigues bajando por la página.</p>
+        </section>
+
+        <section class="seccion-contenido">
+            <h2>Sigue bajando</h2>
+            <p>Encontrarás otra imagen con este mismo efecto.</p>
+            <div class="espaciador"></div>
+        </section>
+
+        <section class="seccion-panoramica" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80');">
+            <h1>Paisaje</h1>
+            <p>Un paisaje verdoso y lindo.</p>
+        </section>
+
+        <section class="seccion-contenido">
+            <div class="espaciador">
+                <p>Y eso es todo :)</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
